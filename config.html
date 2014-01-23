@@ -1,0 +1,290 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>設定 &mdash; atig.rb 0.4.3 documentation</title>
+    
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.4.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="atig.rb 0.4.3 documentation" href="index.html" />
+    <link rel="next" title="tig.rbとの違い" href="tig.html" />
+    <link rel="prev" title="CTCP ACTION" href="commands.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="tig.html" title="tig.rbとの違い"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="commands.html" title="CTCP ACTION"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">atig.rb 0.4.3 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">設定</a><ul>
+<li><a class="reference internal" href="#id2">概要</a></li>
+<li><a class="reference internal" href="#id3">利用可能なコマンドの変更</a></li>
+<li><a class="reference internal" href="#api">取得するAPIの変更</a></li>
+<li><a class="reference internal" href="#id4">取得した発言の加工方法の変更</a></li>
+<li><a class="reference internal" href="#id5">自分の発言の加工</a></li>
+<li><a class="reference internal" href="#id6">チャンネルの変更</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="commands.html"
+                        title="previous chapter">CTCP ACTION</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="tig.html"
+                        title="next chapter">tig.rbとの違い</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/config.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="id1">
+<h1>設定<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id2">
+<h2>概要<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>atig.rbは起動時に <cite>~/.atig/config</cite> を読み込みます。</li>
+<li><cite>~/.atig/config</cite> はRubyのコードが記述可能です。</li>
+<li><cite>Atig::Gateway::Session.&lt;some_field&gt;</cite> を変更すると、atig.rbの動作をカスタマイズできます。</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id3">
+<h2>利用可能なコマンドの変更<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p><cite>Atig::Gateway::Session.commands</cite> を変更すれば、利用可能な <a class="reference internal" href="commands.html"><em>CTCP ACTION</em></a> を変更できます:</p>
+<div class="highlight-python"><pre>Atig::Gateway::Session.commands = [
+                                   Atig::Command::Retweet,
+                                   Atig::Command::Reply,
+                                   ..
+                                  ]</pre>
+</div>
+<p>標準で次のコマンドが用意されています。</p>
+<dl class="docutils">
+<dt>Atig::Command::Retweet</dt>
+<dd><tt class="docutils literal"><span class="pre">/me</span> <span class="pre">retweet</span> <span class="pre">...</span></tt> を提供するクラス</dd>
+<dt>Atig::Command::Reply</dt>
+<dd><tt class="docutils literal"><span class="pre">/me</span> <span class="pre">reply</span> <span class="pre">...</span></tt> を提供するクラス</dd>
+<dt>Atig::Command::User</dt>
+<dd><tt class="docutils literal"><span class="pre">/me</span> <span class="pre">user</span> <span class="pre">...</span></tt> を提供するクラス</dd>
+<dt>Atig::Command::Favorite</dt>
+<dd><tt class="docutils literal"><span class="pre">/me</span> <span class="pre">fav,</span> <span class="pre">unfav</span> <span class="pre">...</span></tt> を提供するクラス</dd>
+<dt>Atig::Command::Uptime</dt>
+<dd><tt class="docutils literal"><span class="pre">/me</span> <span class="pre">uptime</span> <span class="pre">...</span></tt> を提供するクラス</dd>
+<dt>Atig::Command::Destroy</dt>
+<dd><tt class="docutils literal"><span class="pre">/me</span> <span class="pre">destory</span> <span class="pre">...</span></tt> を提供するクラス</dd>
+<dt>Atig::Command::Status</dt>
+<dd>通常の発言時に使われる内部コマンド</dd>
+<dt>Atig::Command::Thread</dt>
+<dd><tt class="docutils literal"><span class="pre">/me</span> <span class="pre">thread</span> <span class="pre">...</span></tt> を提供するクラス</dd>
+<dt>Atig::Command::Time</dt>
+<dd><tt class="docutils literal"><span class="pre">/me</span> <span class="pre">time</span> <span class="pre">...</span></tt> を提供するクラス</dd>
+<dt>Atig::Command::Version</dt>
+<dd><tt class="docutils literal"><span class="pre">/me</span> <span class="pre">verison</span> <span class="pre">...</span></tt> を提供するクラス</dd>
+<dt>Atig::Command::UserInfo</dt>
+<dd><tt class="docutils literal"><span class="pre">/me</span> <span class="pre">userinfo</span> <span class="pre">...</span></tt> を提供するクラス</dd>
+<dt>Atig::Command::Whois</dt>
+<dd><tt class="docutils literal"><span class="pre">/whois</span> <span class="pre">...</span></tt> を提供するクラス</dd>
+<dt>Atig::Command::Option</dt>
+<dd><tt class="docutils literal"><span class="pre">/me</span> <span class="pre">opt</span> <span class="pre">...</span></tt> を提供するクラス</dd>
+<dt>Atig::Command::Limit</dt>
+<dd><tt class="docutils literal"><span class="pre">/me</span> <span class="pre">limit</span></tt> を提供するクラス</dd>
+<dt>Atig::Command::Search</dt>
+<dd><tt class="docutils literal"><span class="pre">/me</span> <span class="pre">search</span></tt> を提供するクラス</dd>
+<dt>Atig::Command::Refresh</dt>
+<dd><dl class="first last docutils">
+<dt><tt class="docutils literal"><span class="pre">/me</span> <span class="pre">refresh</span></tt> を提供するクラス</dt>
+<dd>Atig::Command::Spam,</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="api">
+<h2>取得するAPIの変更<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h2>
+<p><cite>Atig::Gateway::Session.agents</cite> を変更すると、発言やFollowingを取得するのに利用するAPIを変更できます。:</p>
+<div class="highlight-python"><pre>Atig::Gateway::Session.agents  = [
+                                   Atig::Agent::List,
+                                   Atig::Agent::Following,
+                                   ...
+                                  ]</pre>
+</div>
+<p>標準で次のAgentが用意されています。</p>
+<dl class="docutils">
+<dt>Atig::Agent::OwnList</dt>
+<dd>自分のリストのfollowingを取得します。FullListと同時に指定できません。</dd>
+<dt>Atig::Agent::FullList</dt>
+<dd>自分のリストと自分がフォローしているリストのfollowingを取得します。OwnListと同時に指定できません。</dd>
+<dt>Atig::Agent::Following</dt>
+<dd>自分のfollowingを取得します。</dd>
+<dt>Atig::Agent::ListStatus</dt>
+<dd>リスト内の発言を取得します。フォローせずに、Listでだけfollowしている人の発言を取得するために必要です。</dd>
+<dt>Atig::Agent::Mention</dt>
+<dd>自分への言及(mention)を取得します。</dd>
+<dt>Atig::Agent::Dm</dt>
+<dd>自分へのダイレクトメッセージを取得します。</dd>
+<dt>Atig::Agent::Timeline</dt>
+<dd>自分のタイムラインを取得します。</dd>
+<dt>Atig::Agent::Cleanup</dt>
+<dd>定期的にキャッシュのうち、古い内容を削除します。</dd>
+</dl>
+</div>
+<div class="section" id="id4">
+<h2>取得した発言の加工方法の変更<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p><cite>Atig::Gateway::Session.ifilters</cite> を変更すると、取得した発言の加工方法を変更できます。:</p>
+<div class="highlight-python"><pre>Atig::Gateway::Session.ifilters = [
+                                   Atig::IFilter::Utf7,
+                                   Atig::IFilter::Sanitize,
+                                   ...
+                                  ]</pre>
+</div>
+<p>標準で次のIFilterが用意されています。</p>
+<dl class="docutils">
+<dt>Atig::IFilter::Utf7</dt>
+<dd>utf7をデコードします。</dd>
+<dt>Atig::IFilter::Sanitize</dt>
+<dd>&amp;gt; などを置き換えます。</dd>
+<dt>Atig::IFilter::ExpandUrl</dt>
+<dd>短縮URLを展開します。</dd>
+<dt>Atig::IFilter::Strip.new([<tt class="docutils literal"><span class="pre">footer1</span></tt>, <tt class="docutils literal"><span class="pre">footer2</span></tt>, ...])</dt>
+<dd>指定したフッタを除去します。</dd>
+<dt>Atig::IFilter::Retweet</dt>
+<dd>公式RTの先頭に♺ をつけます。</dd>
+<dt>Atig::IFilter::RetweetTime</dt>
+<dd>公式RTの末尾に元発言の日時を表示します。</dd>
+<dt>Atig::IFilter::Tid</dt>
+<dd>発言の末尾に、tidをつけます。 <a class="reference internal" href="options.html"><em>クライアントオプション</em></a> も参照してください。</dd>
+<dt>Atig::IFilter::Sid</dt>
+<dd>発言の末尾に、sidをつけます。 <a class="reference internal" href="options.html"><em>クライアントオプション</em></a> も参照してください。</dd>
+</dl>
+</div>
+<div class="section" id="id5">
+<h2>自分の発言の加工<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p><cite>Atig::Gateway::Session.ofilters</cite> を変更すると、自分の発言の加工方法を変更できます。:</p>
+<dl class="docutils">
+<dt>Atig::Gateway::Session.ofilters = [</dt>
+<dd><blockquote class="first">
+<div>Atig::OFilter::EscapeUrl,
+Atig::OFilter::ShortUrl,
+Atig::OFilter::Geo,
+Atig::OFilter::Footer,</div></blockquote>
+<p class="last">]</p>
+</dd>
+</dl>
+<p>標準で次のOFilterが用意されています。</p>
+<dl class="docutils">
+<dt>Atig::OFilter::EscapeUrl</dt>
+<dd>URLエスケープを行ないます。</dd>
+<dt>Atig::OFilter::ShortUrl</dt>
+<dd>URLを短縮します。 <a class="reference internal" href="options.html"><em>クライアントオプション</em></a> も参照してください。</dd>
+<dt>Atig::OFilter::Geo</dt>
+<dd>位置情報を付加します。 <a class="reference internal" href="options.html"><em>クライアントオプション</em></a> も参照してください。</dd>
+<dt>Atig::OFilter::Footer</dt>
+<dd>フッターを付加します。 <a class="reference internal" href="options.html"><em>クライアントオプション</em></a> も参照してください。</dd>
+</dl>
+</div>
+<div class="section" id="id6">
+<h2>チャンネルの変更<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<p><cite>Atig::Gateway::Session.channels</cite> を変更すると、作成するチャンネルを変更できます。:</p>
+<div class="highlight-python"><pre>Atig::Gateway::Session.channels = [
+                                   Atig::Channel::Timeline,
+                                   Atig::Channel::Mention,
+                                   Atig::Channel::Dm,
+                                   Atig::Channel::List,
+                                   Atig::Channel::Retweet
+                                  ]</pre>
+</div>
+<p>標準で次のChannelが用意されています。</p>
+<dl class="docutils">
+<dt>Atig::Channel::Timeline</dt>
+<dd>フォローしている人全員の発言を表示する <cite>#twitter</cite> を作成します。</dd>
+<dt>Atig::Channel::Mention</dt>
+<dd>自分への言及を表示する <cite>#mention</cite> を作成します。</dd>
+<dt>Atig::Channel::Retweet</dt>
+<dd>自分のフォローしている人の公式RTを表示する <cite>#retweet</cite> を作成します。</dd>
+<dt>Atig::Channel::Dm</dt>
+<dd>DMの受信時にチャンネルを作成します。</dd>
+<dt>Atig::Channel::List</dt>
+<dd>リストごとにチャンネルを作成します。</dd>
+</dl>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="tig.html" title="tig.rbとの違い"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="commands.html" title="CTCP ACTION"
+             >previous</a> |</li>
+        <li><a href="index.html">atig.rb 0.4.3 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2010-2013, mzp.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b3.
+    </div>
+  </body>
+</html>

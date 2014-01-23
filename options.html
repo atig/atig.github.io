@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>クライアントオプション &mdash; atig.rb 0.4.3 documentation</title>
+    
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.4.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="atig.rb 0.4.3 documentation" href="index.html" />
+    <link rel="next" title="CTCP ACTION" href="commands.html" />
+    <link rel="prev" title="コマンドラインオプション" href="commandline_options.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="commands.html" title="CTCP ACTION"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="commandline_options.html" title="コマンドラインオプション"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">atig.rb 0.4.3 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">クライアントオプション</a><ul>
+<li><a class="reference internal" href="#id2">概要</a></li>
+<li><a class="reference internal" href="#id3">発言関係</a></li>
+<li><a class="reference internal" href="#id4">フォロワー関係</a></li>
+<li><a class="reference internal" href="#id5">発言関連</a></li>
+<li><a class="reference internal" href="#url">URL短縮関係</a></li>
+<li><a class="reference internal" href="#id6">システム関係</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="commandline_options.html"
+                        title="previous chapter">コマンドラインオプション</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="commands.html"
+                        title="next chapter">CTCP ACTION</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/options.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="id1">
+<h1>クライアントオプション<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id2">
+<h2>概要<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>realnameのユーザ名の後ろにいろいろと書くことで、各オプションを有効にできます。</p>
+<p>例えば次のようにすると、tidオプションとonlyオプションが有効になります。</p>
+<div class="highlight-python"><pre>twitter {
+    host: localhost
+    port: 19876
+    name: mzp tid only
+}</pre>
+</div>
+<p><a class="reference internal" href="commands.html"><em>CTCP ACTION</em></a> のoptコマンドを用いると、実行中に変更できます。</p>
+</div>
+<div class="section" id="id3">
+<h2>発言関係<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>tid</dt>
+<dd><p class="first">各発言にtidを表示します。tidは特定の発言へreplyする場合などに利用します。</p>
+<p class="last"><a class="reference internal" href="commands.html"><em>CTCP ACTION</em></a> も参照してください。</p>
+</dd>
+<dt>sid</dt>
+<dd><p class="first">各発言にsidを表示します。sidはtidと同様に利用できます。</p>
+<p class="last">sidは <tt class="docutils literal"><span class="pre">ユーザ名</span></tt>:<tt class="docutils literal"><span class="pre">id</span></tt> という書式にです。そのため、
+ユーザ名の補完機能のあるクライアントではtidより入力が容易です。</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="id4">
+<h2>フォロワー関係<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>only</dt>
+<dd>指定すると片思い表示機能を有効にします。有効にしていると、自分が一方的
+にフォローしている人に <tt class="docutils literal"><span class="pre">+o</span></tt> がつきます。たいていのクライアントだと
+<tt class="docutils literal"><span class="pre">&#64;</span></tt> がつきます。</dd>
+</dl>
+</div>
+<div class="section" id="id5">
+<h2>発言関連<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>stream</dt>
+<dd><a class="reference external" href="https://dev.twitter.com/docs/streaming-apis/streams/user">UserStream</a> を有効にします。
+実行中の変更には対応していません。</dd>
+<dt>footer=<tt class="docutils literal"><span class="pre">footer</span></tt></dt>
+<dd>発言の末尾に、 <tt class="docutils literal"><span class="pre">footer</span></tt> を追加します。
+ただし <tt class="docutils literal"><span class="pre">footer</span></tt> がfalseの場合は、追加しません。</dd>
+<dt>old_style_reply</dt>
+<dd>&#64;nickで始まる発言が、&#64;nick の最新の発言へのreplyとなるモードに切り替えます。</dd>
+</dl>
+</div>
+<div class="section" id="url">
+<h2>URL短縮関係<a class="headerlink" href="#url" title="Permalink to this headline">¶</a></h2>
+<p>発言中の長いURLを自動で短縮します。どの短縮URLサービスを用いて短縮する
+か、どの程度の長さのURLを短縮するか、などが設定できます。</p>
+<dl class="docutils">
+<dt>bitlify</dt>
+<dd>20字以上のURLを <a class="reference external" href="http://bit.ly">http://bit.ly</a>によって短縮します。</dd>
+<dt>bitlify=<tt class="docutils literal"><span class="pre">size</span></tt></dt>
+<dd><tt class="docutils literal"><span class="pre">size</span></tt>字以上のURLを <a class="reference external" href="http://bit.ly">http://bit.ly</a>によって短縮します。</dd>
+<dt>bitlify=<tt class="docutils literal"><span class="pre">username</span></tt>:<tt class="docutils literal"><span class="pre">api_key</span></tt></dt>
+<dd>20字以上のURLを <a class="reference external" href="http://bit.ly">http://bit.ly</a> のAPIによって短縮します。</dd>
+<dt>bitlify=<tt class="docutils literal"><span class="pre">username</span></tt>:<tt class="docutils literal"><span class="pre">api_key</span></tt>:<tt class="docutils literal"><span class="pre">size</span></tt></dt>
+<dd><tt class="docutils literal"><span class="pre">size</span></tt>字以上のURLを <a class="reference external" href="http://bit.ly">http://bit.ly</a> のAPIによって短縮します。
+APIを利用して短縮すると、ユーザページに短縮したURLが記録されたりします。
+詳しくは、 <a class="reference external" href="http://bit.ly">http://bit.ly</a> のSign up for bit.lyを読んでください。</dd>
+</dl>
+</div>
+<div class="section" id="id6">
+<h2>システム関係<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>api_base=<tt class="docutils literal"><span class="pre">api_base</span></tt></dt>
+<dd>Twitterのエントリポイントを指定します。実行中の変更には対応していません。指定しない場合は、<a class="reference external" href="https://api.twitter.com/1">https://api.twitter.com/1</a>/が用いられます。</dd>
+</dl>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="commands.html" title="CTCP ACTION"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="commandline_options.html" title="コマンドラインオプション"
+             >previous</a> |</li>
+        <li><a href="index.html">atig.rb 0.4.3 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2010-2013, mzp.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b3.
+    </div>
+  </body>
+</html>
