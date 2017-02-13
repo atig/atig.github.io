@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>更新履歴 &mdash; atig.rb 0.4.3 documentation</title>
+    <title>更新履歴 &#8212; atig.rb 0.4.3 documentation</title>
     
     <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -17,17 +17,19 @@
         VERSION:     '0.4.3',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="atig.rb 0.4.3 documentation" href="index.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
     <link rel="prev" title="tig.rbとの違い" href="tig.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -36,10 +38,10 @@
         <li class="right" >
           <a href="tig.html" title="tig.rbとの違い"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">atig.rb 0.4.3 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">atig.rb 0.4.3 documentation</a> &#187;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
@@ -130,22 +132,21 @@
   <h4>Previous topic</h4>
   <p class="topless"><a href="tig.html"
                         title="previous chapter">tig.rbとの違い</a></p>
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="_sources/changelog.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/changelog.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -154,7 +155,7 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="id1">
 <h1>更新履歴<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
@@ -375,7 +376,7 @@
 <h3>機能追加<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><ul class="simple">
-<li><a class="reference internal" href="config.html"><em>設定</em></a>: <cite>Atig::IFilter::RetweetTime</cite> を追加しました</li>
+<li><a class="reference internal" href="config.html"><span class="doc">設定</span></a>: <cite>Atig::IFilter::RetweetTime</cite> を追加しました</li>
 </ul>
 </div></blockquote>
 </div>
@@ -385,8 +386,8 @@
 <div><ul class="simple">
 <li>DBのデータ削除の周期を減らしました</li>
 <li>DMチャンネルでのDMの送信に対応しました</li>
-<li><a class="reference internal" href="commands.html"><em>CTCP ACTION</em></a>: <cite>limit</cite> にリセットされる日付を表示するようにした (thx. <a class="reference external" href="https://twitter.com/hirose31">hirose31</a> )</li>
-<li><a class="reference internal" href="config.html"><em>設定</em></a>: 自動展開するURLにhtn.to, goo.glを追加</li>
+<li><a class="reference internal" href="commands.html"><span class="doc">CTCP ACTION</span></a>: <cite>limit</cite> にリセットされる日付を表示するようにした (thx. <a class="reference external" href="https://twitter.com/hirose31">hirose31</a> )</li>
+<li><a class="reference internal" href="config.html"><span class="doc">設定</span></a>: 自動展開するURLにhtn.to, goo.glを追加</li>
 </ul>
 </div></blockquote>
 </div>
@@ -398,9 +399,9 @@
 <h3>機能追加<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><ul class="simple">
-<li><a class="reference internal" href="commands.html"><em>CTCP ACTION</em></a>: <cite>refresh</cite> を追加しました</li>
-<li><a class="reference internal" href="commands.html"><em>CTCP ACTION</em></a>: <cite>spam</cite> を追加しました</li>
-<li><tt class="xref doc docutils literal"><span class="pre">agent</span></tt> : 他人のリストをフォローできるようになりました</li>
+<li><a class="reference internal" href="commands.html"><span class="doc">CTCP ACTION</span></a>: <cite>refresh</cite> を追加しました</li>
+<li><a class="reference internal" href="commands.html"><span class="doc">CTCP ACTION</span></a>: <cite>spam</cite> を追加しました</li>
+<li><span class="xref doc">agent</span> : 他人のリストをフォローできるようになりました</li>
 </ul>
 </div></blockquote>
 </div>
@@ -429,7 +430,7 @@
 <h3>機能追加<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><ul class="simple">
-<li><a class="reference internal" href="commands.html"><em>CTCP ACTION</em></a>: <cite>search</cite> を追加しました。(thx. <a class="reference external" href="http://blog.xeres.jp/2010/06/04/atig_rb-tweet-search/">xeres</a> )</li>
+<li><a class="reference internal" href="commands.html"><span class="doc">CTCP ACTION</span></a>: <cite>search</cite> を追加しました。(thx. <a class="reference external" href="http://blog.xeres.jp/2010/06/04/atig_rb-tweet-search/">xeres</a> )</li>
 </ul>
 </div></blockquote>
 </div>
@@ -454,8 +455,8 @@
 <h3>機能追加<a class="headerlink" href="#id29" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><ul class="simple">
-<li><a class="reference internal" href="commands.html"><em>CTCP ACTION</em></a>: <cite>autofix</cite>, <cite>location</cite> を追加しました。</li>
-<li><a class="reference internal" href="irc.html"><em>IRCコマンド</em></a>: <cite>/topic</cite> が <cite>/me autofix</cite> のエイリアスになりました。</li>
+<li><a class="reference internal" href="commands.html"><span class="doc">CTCP ACTION</span></a>: <cite>autofix</cite>, <cite>location</cite> を追加しました。</li>
+<li><a class="reference internal" href="irc.html"><span class="doc">IRCコマンド</span></a>: <cite>/topic</cite> が <cite>/me autofix</cite> のエイリアスになりました。</li>
 <li>最新の発言を削除した場合、トピック(topic)をひとつ前に戻すようにした</li>
 </ul>
 </div></blockquote>
@@ -468,10 +469,10 @@
 <h3>機能追加<a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><ul class="simple">
-<li><a class="reference internal" href="options.html"><em>クライアントオプション</em></a>: <cite>sid</cite> を追加した。</li>
-<li><a class="reference internal" href="config.html"><em>設定</em></a>: <cite>Atig::IFilter::Sid</cite> を追加した。</li>
-<li><a class="reference internal" href="options.html"><em>クライアントオプション</em></a>: <cite>old_style_reply</cite> を追加した。</li>
-<li><a class="reference internal" href="commands.html"><em>CTCP ACTION</em></a>: <cite>reply</cite>, <cite>retweet</cite>, <cite>destroy</cite>, <cite>fav</cite>, <cite>unfav</cite>, <cite>thread</cite> でスクリーンネームやsidを利用できるようにした。</li>
+<li><a class="reference internal" href="options.html"><span class="doc">クライアントオプション</span></a>: <cite>sid</cite> を追加した。</li>
+<li><a class="reference internal" href="config.html"><span class="doc">設定</span></a>: <cite>Atig::IFilter::Sid</cite> を追加した。</li>
+<li><a class="reference internal" href="options.html"><span class="doc">クライアントオプション</span></a>: <cite>old_style_reply</cite> を追加した。</li>
+<li><a class="reference internal" href="commands.html"><span class="doc">CTCP ACTION</span></a>: <cite>reply</cite>, <cite>retweet</cite>, <cite>destroy</cite>, <cite>fav</cite>, <cite>unfav</cite>, <cite>thread</cite> でスクリーンネームやsidを利用できるようにした。</li>
 </ul>
 </div></blockquote>
 </div>
@@ -499,7 +500,7 @@
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -508,12 +509,12 @@
         <li class="right" >
           <a href="tig.html" title="tig.rbとの違い"
              >previous</a> |</li>
-        <li><a href="index.html">atig.rb 0.4.3 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">atig.rb 0.4.3 documentation</a> &#187;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2010-2013, mzp.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b3.
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2010-2013, mzp.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.2.
     </div>
   </body>
 </html>

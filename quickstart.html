@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>クイックスタート &mdash; atig.rb 0.4.3 documentation</title>
+    <title>クイックスタート &#8212; atig.rb 0.4.3 documentation</title>
     
     <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -17,18 +17,20 @@
         VERSION:     '0.4.3',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="atig.rb 0.4.3 documentation" href="index.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="atig.rbの特徴" href="feature.html" />
     <link rel="prev" title="atig.rb : Another Twitter Irc Gateway" href="index.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -40,10 +42,10 @@
         <li class="right" >
           <a href="index.html" title="atig.rb : Another Twitter Irc Gateway"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">atig.rb 0.4.3 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">atig.rb 0.4.3 documentation</a> &#187;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
@@ -72,22 +74,21 @@
   <h4>Next topic</h4>
   <p class="topless"><a href="feature.html"
                         title="next chapter">atig.rbの特徴</a></p>
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="_sources/quickstart.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/quickstart.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -96,7 +97,7 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="id1">
 <h1>クイックスタート<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
@@ -126,14 +127,16 @@
 <div class="section" id="id4">
 <h3>リリース版<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
 <p>Rubygemsを使用してインストールしてください。:</p>
-<div class="highlight-python"><pre>$ gem install atig</pre>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ gem install atig
+</pre></div>
 </div>
 <p>または <a class="reference external" href="https://github.com/atig/atig/downloads">GitHub</a> からダウンロードしてください。</p>
 </div>
 <div class="section" id="trunk">
 <h3>trunk版<a class="headerlink" href="#trunk" title="Permalink to this headline">¶</a></h3>
 <p>githubからpullしてください。:</p>
-<div class="highlight-python"><pre>$ git clone https://github.com/atig/atig.git</pre>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ git clone https://github.com/atig/atig.git
+</pre></div>
 </div>
 </div>
 </div>
@@ -142,12 +145,14 @@
 <div class="section" id="id6">
 <h3>起動<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
 <p>コマンドラインから起動します。:</p>
-<div class="highlight-python"><pre>$ atig -d</pre>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ atig -d
+</pre></div>
 </div>
 <p>githubからダウンロードした場合:</p>
-<div class="highlight-python"><pre>$ cd atig
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ cd atig
 $ bin/atig -d
-I, [2010-04-05T07:22:07.861527 #62002]  INFO -- : Host: localhost Port:16668</pre>
+I, [2010-04-05T07:22:07.861527 #62002]  INFO -- : Host: localhost Port:16668
+</pre></div>
 </div>
 </div>
 <div class="section" id="id7">
@@ -157,9 +162,9 @@ I, [2010-04-05T07:22:07.861527 #62002]  INFO -- : Host: localhost Port:16668</pr
 <div><ul class="simple">
 <li>nickname: Twitterのユーザ名</li>
 <li>login name: 使ってないので適当に</li>
-<li>real name: <a class="reference internal" href="options.html"><em>クライアントオプション</em></a> 。tidがおすすめです。</li>
+<li>real name: <a class="reference internal" href="options.html"><span class="doc">クライアントオプション</span></a> 。tidがおすすめです。</li>
 <li>password: 空欄</li>
-<li>詳しくは <a class="reference internal" href="irc.html"><em>IRCコマンド</em></a> を参照してください。</li>
+<li>詳しくは <a class="reference internal" href="irc.html"><span class="doc">IRCコマンド</span></a> を参照してください。</li>
 </ul>
 </div></blockquote>
 <img alt="_images/irc_setting.png" src="_images/irc_setting.png" />
@@ -179,7 +184,7 @@ I, [2010-04-05T07:22:07.861527 #62002]  INFO -- : Host: localhost Port:16668</pr
 <blockquote>
 <div><ul class="simple">
 <li>#twitterで発言すると、Twitterに投稿されます。</li>
-<li><a class="reference internal" href="commands.html"><em>CTCP ACTION</em></a> を用いると、RTやreplyが行なえます。</li>
+<li><a class="reference internal" href="commands.html"><span class="doc">CTCP ACTION</span></a> を用いると、RTやreplyが行なえます。</li>
 </ul>
 </div></blockquote>
 </div>
@@ -201,7 +206,7 @@ I, [2010-04-05T07:22:07.861527 #62002]  INFO -- : Host: localhost Port:16668</pr
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -213,12 +218,12 @@ I, [2010-04-05T07:22:07.861527 #62002]  INFO -- : Host: localhost Port:16668</pr
         <li class="right" >
           <a href="index.html" title="atig.rb : Another Twitter Irc Gateway"
              >previous</a> |</li>
-        <li><a href="index.html">atig.rb 0.4.3 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">atig.rb 0.4.3 documentation</a> &#187;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2010-2013, mzp.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b3.
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2010-2013, mzp.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.2.
     </div>
   </body>
 </html>

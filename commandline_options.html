@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>コマンドラインオプション &mdash; atig.rb 0.4.3 documentation</title>
+    <title>コマンドラインオプション &#8212; atig.rb 0.4.3 documentation</title>
     
     <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -17,18 +17,20 @@
         VERSION:     '0.4.3',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="atig.rb 0.4.3 documentation" href="index.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="クライアントオプション" href="options.html" />
     <link rel="prev" title="IRCコマンド" href="irc.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -40,10 +42,10 @@
         <li class="right" >
           <a href="irc.html" title="IRCコマンド"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">atig.rb 0.4.3 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">atig.rb 0.4.3 documentation</a> &#187;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
@@ -60,22 +62,21 @@
   <h4>Next topic</h4>
   <p class="topless"><a href="options.html"
                         title="next chapter">クライアントオプション</a></p>
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="_sources/commandline_options.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/commandline_options.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -84,13 +85,13 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="id1">
 <h1>コマンドラインオプション<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="id2">
 <h2>書式<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><div class="highlight"><pre><span class="nb">bin</span><span class="o">/</span><span class="n">atig</span> <span class="p">[</span><span class="n">opts</span><span class="p">]</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">bin</span><span class="o">/</span><span class="n">atig</span> <span class="p">[</span><span class="n">opts</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -101,19 +102,19 @@
 <dd>ヘルプを表示します。</dd>
 <dt><cite>-v</cite>, <cite>&#8211;version</cite></dt>
 <dd>バージョンを表示します。</dd>
-<dt><cite>-p</cite>, <cite>&#8211;port</cite> <tt class="docutils literal"><span class="pre">PORT</span></tt></dt>
+<dt><cite>-p</cite>, <cite>&#8211;port</cite> <code class="docutils literal"><span class="pre">PORT</span></code></dt>
 <dd>起動するポート番号を指定します。デフォルトは16668です。</dd>
-<dt><cite>-h</cite>, <cite>&#8211;host</cite> <tt class="docutils literal"><span class="pre">HOST</span></tt></dt>
+<dt><cite>-h</cite>, <cite>&#8211;host</cite> <code class="docutils literal"><span class="pre">HOST</span></code></dt>
 <dd>起動するホスト名、またはIPアドレスを指定します。デフォルトはlocalhostです。</dd>
-<dt><cite>-l</cite>, <cite>&#8211;log</cite> <tt class="docutils literal"><span class="pre">LOG</span></tt></dt>
+<dt><cite>-l</cite>, <cite>&#8211;log</cite> <code class="docutils literal"><span class="pre">LOG</span></code></dt>
 <dd>ログを記録するファイル名を指定します。</dd>
 <dt><cite>-d</cite>, <cite>&#8211;debug</cite></dt>
 <dd>デバッグモードを有効にします。</dd>
-<dt><cite>-t</cite>, <cite>&#8211;tmpdir</cite> <tt class="docutils literal"><span class="pre">PATH</span></tt></dt>
+<dt><cite>-t</cite>, <cite>&#8211;tmpdir</cite> <code class="docutils literal"><span class="pre">PATH</span></code></dt>
 <dd>テンポラリディレクトリのパスを指定します。</dd>
 <dt><cite>-m</cite>, <cite>&#8211;memprof</cite></dt>
 <dd>メモリプロファイラを有効にします。</dd>
-<dt><cite>-c</cite>, <cite>&#8211;conf</cite> <tt class="docutils literal"><span class="pre">filename</span></tt></dt>
+<dt><cite>-c</cite>, <cite>&#8211;conf</cite> <code class="docutils literal"><span class="pre">filename</span></code></dt>
 <dd>ロードする設定ファイルを指定します。詳しくは doc:<cite>conf</cite> を参照してください。</dd>
 </dl>
 </div>
@@ -125,7 +126,7 @@
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -137,12 +138,12 @@
         <li class="right" >
           <a href="irc.html" title="IRCコマンド"
              >previous</a> |</li>
-        <li><a href="index.html">atig.rb 0.4.3 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">atig.rb 0.4.3 documentation</a> &#187;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2010-2013, mzp.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b3.
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2010-2013, mzp.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.2.
     </div>
   </body>
 </html>

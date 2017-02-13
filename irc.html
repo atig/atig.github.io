@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>IRCコマンド &mdash; atig.rb 0.4.3 documentation</title>
+    <title>IRCコマンド &#8212; atig.rb 0.4.3 documentation</title>
     
     <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -17,18 +17,20 @@
         VERSION:     '0.4.3',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="atig.rb 0.4.3 documentation" href="index.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="コマンドラインオプション" href="commandline_options.html" />
     <link rel="prev" title="atig.rbの特徴" href="feature.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -40,10 +42,10 @@
         <li class="right" >
           <a href="feature.html" title="atig.rbの特徴"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">atig.rb 0.4.3 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">atig.rb 0.4.3 documentation</a> &#187;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
@@ -60,22 +62,21 @@
   <h4>Next topic</h4>
   <p class="topless"><a href="commandline_options.html"
                         title="next chapter">コマンドラインオプション</a></p>
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="_sources/irc.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/irc.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -84,7 +85,7 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="irc">
 <h1>IRCコマンド<a class="headerlink" href="#irc" title="Permalink to this headline">¶</a></h1>
@@ -93,7 +94,7 @@
 <blockquote>
 <div><ul class="simple">
 <li>nick: OAuthのプロファイル名、ベーシック認証時のユーザ名</li>
-<li>real: クライアントオプション。詳細は <a class="reference internal" href="options.html"><em>クライアントオプション</em></a> を参照してください。</li>
+<li>real: クライアントオプション。詳細は <a class="reference internal" href="options.html"><span class="doc">クライアントオプション</span></a> を参照してください。</li>
 <li>pass: ベーシック認証時のパスワード</li>
 </ul>
 </div></blockquote>
@@ -101,21 +102,21 @@
 <div class="section" id="id1">
 <h2>IRCコマンドとの対応<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <dl class="docutils">
-<dt>/invite <tt class="docutils literal"><span class="pre">screen_name</span></tt> <tt class="docutils literal"><span class="pre">channel</span></tt></dt>
-<dd><p class="first"><tt class="docutils literal"><span class="pre">channel</span></tt> がメインチャンネル(通常は#twitter)の場合、ユーザ <tt class="docutils literal"><span class="pre">screen_name</span></tt> をフォローします。  同時にユーザ一覧の更新も行なうので、「follow <tt class="docutils literal"><span class="pre">screen_name</span></tt> 」と発言するよりも便利です。</p>
-<p class="last"><tt class="docutils literal"><span class="pre">channel</span></tt> がリストチャンネルの場合、ユーザ <tt class="docutils literal"><span class="pre">screen_name</span></tt> をリストに追加します。</p>
+<dt>/invite <code class="docutils literal"><span class="pre">screen_name</span></code> <code class="docutils literal"><span class="pre">channel</span></code></dt>
+<dd><p class="first"><code class="docutils literal"><span class="pre">channel</span></code> がメインチャンネル(通常は#twitter)の場合、ユーザ <code class="docutils literal"><span class="pre">screen_name</span></code> をフォローします。  同時にユーザ一覧の更新も行なうので、「follow <code class="docutils literal"><span class="pre">screen_name</span></code> 」と発言するよりも便利です。</p>
+<p class="last"><code class="docutils literal"><span class="pre">channel</span></code> がリストチャンネルの場合、ユーザ <code class="docutils literal"><span class="pre">screen_name</span></code> をリストに追加します。</p>
 </dd>
-<dt>/kick <tt class="docutils literal"><span class="pre">screen_name</span></tt> <tt class="docutils literal"><span class="pre">channel</span></tt></dt>
-<dd><p class="first"><tt class="docutils literal"><span class="pre">channel</span></tt> がメインチャンネル(通常は#twitter)の場合、ユーザ <tt class="docutils literal"><span class="pre">screen_name</span></tt> をリムーブします。</p>
-<p class="last"><tt class="docutils literal"><span class="pre">channel</span></tt> がリストチャンネルの場合、ユーザ <tt class="docutils literal"><span class="pre">screen_name</span></tt> をリストから削除します。</p>
+<dt>/kick <code class="docutils literal"><span class="pre">screen_name</span></code> <code class="docutils literal"><span class="pre">channel</span></code></dt>
+<dd><p class="first"><code class="docutils literal"><span class="pre">channel</span></code> がメインチャンネル(通常は#twitter)の場合、ユーザ <code class="docutils literal"><span class="pre">screen_name</span></code> をリムーブします。</p>
+<p class="last"><code class="docutils literal"><span class="pre">channel</span></code> がリストチャンネルの場合、ユーザ <code class="docutils literal"><span class="pre">screen_name</span></code> をリストから削除します。</p>
 </dd>
-<dt>/whois <tt class="docutils literal"><span class="pre">screen_name</span></tt></dt>
-<dd><tt class="docutils literal"><span class="pre">screen_name</span></tt> の情報を表示します。ID番号、名前、自己紹介、現在地などを表示します。</dd>
-<dt>/topic <tt class="docutils literal"><span class="pre">topic</span></tt></dt>
-<dd><a class="reference internal" href="commands.html"><em>CTCP ACTION</em></a> の <cite>autofix</cite> へのエイリアスです。
-<tt class="docutils literal"><span class="pre">topic</span></tt> が前回の発言と類似している場合、古い発言を上書きします。</dd>
-<dt>/who <tt class="docutils literal"><span class="pre">channel</span></tt></dt>
-<dd><tt class="docutils literal"><span class="pre">channel</span></tt> の参加者の情報を表示します。ID番号、名前などを表示します。</dd>
+<dt>/whois <code class="docutils literal"><span class="pre">screen_name</span></code></dt>
+<dd><code class="docutils literal"><span class="pre">screen_name</span></code> の情報を表示します。ID番号、名前、自己紹介、現在地などを表示します。</dd>
+<dt>/topic <code class="docutils literal"><span class="pre">topic</span></code></dt>
+<dd><a class="reference internal" href="commands.html"><span class="doc">CTCP ACTION</span></a> の <cite>autofix</cite> へのエイリアスです。
+<code class="docutils literal"><span class="pre">topic</span></code> が前回の発言と類似している場合、古い発言を上書きします。</dd>
+<dt>/who <code class="docutils literal"><span class="pre">channel</span></code></dt>
+<dd><code class="docutils literal"><span class="pre">channel</span></code> の参加者の情報を表示します。ID番号、名前などを表示します。</dd>
 </dl>
 </div>
 </div>
@@ -126,7 +127,7 @@
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -138,12 +139,12 @@
         <li class="right" >
           <a href="feature.html" title="atig.rbの特徴"
              >previous</a> |</li>
-        <li><a href="index.html">atig.rb 0.4.3 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">atig.rb 0.4.3 documentation</a> &#187;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2010-2013, mzp.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b3.
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2010-2013, mzp.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.2.
     </div>
   </body>
 </html>

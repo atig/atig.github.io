@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>設定 &mdash; atig.rb 0.4.3 documentation</title>
+    <title>設定 &#8212; atig.rb 0.4.3 documentation</title>
     
     <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -17,18 +17,20 @@
         VERSION:     '0.4.3',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="atig.rb 0.4.3 documentation" href="index.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="tig.rbとの違い" href="tig.html" />
     <link rel="prev" title="CTCP ACTION" href="commands.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -40,10 +42,10 @@
         <li class="right" >
           <a href="commands.html" title="CTCP ACTION"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">atig.rb 0.4.3 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">atig.rb 0.4.3 documentation</a> &#187;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
@@ -64,22 +66,21 @@
   <h4>Next topic</h4>
   <p class="topless"><a href="tig.html"
                         title="next chapter">tig.rbとの違い</a></p>
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="_sources/config.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/config.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -88,7 +89,7 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="id1">
 <h1>設定<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
@@ -104,48 +105,49 @@
 </div>
 <div class="section" id="id3">
 <h2>利用可能なコマンドの変更<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
-<p><cite>Atig::Gateway::Session.commands</cite> を変更すれば、利用可能な <a class="reference internal" href="commands.html"><em>CTCP ACTION</em></a> を変更できます:</p>
-<div class="highlight-python"><pre>Atig::Gateway::Session.commands = [
-                                   Atig::Command::Retweet,
-                                   Atig::Command::Reply,
-                                   ..
-                                  ]</pre>
+<p><cite>Atig::Gateway::Session.commands</cite> を変更すれば、利用可能な <a class="reference internal" href="commands.html"><span class="doc">CTCP ACTION</span></a> を変更できます:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Atig</span><span class="p">::</span><span class="n">Gateway</span><span class="p">::</span><span class="n">Session</span><span class="o">.</span><span class="n">commands</span> <span class="o">=</span> <span class="p">[</span>
+                                   <span class="n">Atig</span><span class="p">::</span><span class="n">Command</span><span class="p">::</span><span class="n">Retweet</span><span class="p">,</span>
+                                   <span class="n">Atig</span><span class="p">::</span><span class="n">Command</span><span class="p">::</span><span class="n">Reply</span><span class="p">,</span>
+                                   <span class="o">..</span>
+                                  <span class="p">]</span>
+</pre></div>
 </div>
 <p>標準で次のコマンドが用意されています。</p>
 <dl class="docutils">
 <dt>Atig::Command::Retweet</dt>
-<dd><tt class="docutils literal"><span class="pre">/me</span> <span class="pre">retweet</span> <span class="pre">...</span></tt> を提供するクラス</dd>
+<dd><code class="docutils literal"><span class="pre">/me</span> <span class="pre">retweet</span> <span class="pre">...</span></code> を提供するクラス</dd>
 <dt>Atig::Command::Reply</dt>
-<dd><tt class="docutils literal"><span class="pre">/me</span> <span class="pre">reply</span> <span class="pre">...</span></tt> を提供するクラス</dd>
+<dd><code class="docutils literal"><span class="pre">/me</span> <span class="pre">reply</span> <span class="pre">...</span></code> を提供するクラス</dd>
 <dt>Atig::Command::User</dt>
-<dd><tt class="docutils literal"><span class="pre">/me</span> <span class="pre">user</span> <span class="pre">...</span></tt> を提供するクラス</dd>
+<dd><code class="docutils literal"><span class="pre">/me</span> <span class="pre">user</span> <span class="pre">...</span></code> を提供するクラス</dd>
 <dt>Atig::Command::Favorite</dt>
-<dd><tt class="docutils literal"><span class="pre">/me</span> <span class="pre">fav,</span> <span class="pre">unfav</span> <span class="pre">...</span></tt> を提供するクラス</dd>
+<dd><code class="docutils literal"><span class="pre">/me</span> <span class="pre">fav,</span> <span class="pre">unfav</span> <span class="pre">...</span></code> を提供するクラス</dd>
 <dt>Atig::Command::Uptime</dt>
-<dd><tt class="docutils literal"><span class="pre">/me</span> <span class="pre">uptime</span> <span class="pre">...</span></tt> を提供するクラス</dd>
+<dd><code class="docutils literal"><span class="pre">/me</span> <span class="pre">uptime</span> <span class="pre">...</span></code> を提供するクラス</dd>
 <dt>Atig::Command::Destroy</dt>
-<dd><tt class="docutils literal"><span class="pre">/me</span> <span class="pre">destroy</span> <span class="pre">...</span></tt> を提供するクラス</dd>
+<dd><code class="docutils literal"><span class="pre">/me</span> <span class="pre">destroy</span> <span class="pre">...</span></code> を提供するクラス</dd>
 <dt>Atig::Command::Status</dt>
 <dd>通常の発言時に使われる内部コマンド</dd>
 <dt>Atig::Command::Thread</dt>
-<dd><tt class="docutils literal"><span class="pre">/me</span> <span class="pre">thread</span> <span class="pre">...</span></tt> を提供するクラス</dd>
+<dd><code class="docutils literal"><span class="pre">/me</span> <span class="pre">thread</span> <span class="pre">...</span></code> を提供するクラス</dd>
 <dt>Atig::Command::Time</dt>
-<dd><tt class="docutils literal"><span class="pre">/me</span> <span class="pre">time</span> <span class="pre">...</span></tt> を提供するクラス</dd>
+<dd><code class="docutils literal"><span class="pre">/me</span> <span class="pre">time</span> <span class="pre">...</span></code> を提供するクラス</dd>
 <dt>Atig::Command::Version</dt>
-<dd><tt class="docutils literal"><span class="pre">/me</span> <span class="pre">version</span> <span class="pre">...</span></tt> を提供するクラス</dd>
+<dd><code class="docutils literal"><span class="pre">/me</span> <span class="pre">version</span> <span class="pre">...</span></code> を提供するクラス</dd>
 <dt>Atig::Command::UserInfo</dt>
-<dd><tt class="docutils literal"><span class="pre">/me</span> <span class="pre">userinfo</span> <span class="pre">...</span></tt> を提供するクラス</dd>
+<dd><code class="docutils literal"><span class="pre">/me</span> <span class="pre">userinfo</span> <span class="pre">...</span></code> を提供するクラス</dd>
 <dt>Atig::Command::Whois</dt>
-<dd><tt class="docutils literal"><span class="pre">/whois</span> <span class="pre">...</span></tt> を提供するクラス</dd>
+<dd><code class="docutils literal"><span class="pre">/whois</span> <span class="pre">...</span></code> を提供するクラス</dd>
 <dt>Atig::Command::Option</dt>
-<dd><tt class="docutils literal"><span class="pre">/me</span> <span class="pre">opt</span> <span class="pre">...</span></tt> を提供するクラス</dd>
+<dd><code class="docutils literal"><span class="pre">/me</span> <span class="pre">opt</span> <span class="pre">...</span></code> を提供するクラス</dd>
 <dt>Atig::Command::Limit</dt>
-<dd><tt class="docutils literal"><span class="pre">/me</span> <span class="pre">limit</span></tt> を提供するクラス</dd>
+<dd><code class="docutils literal"><span class="pre">/me</span> <span class="pre">limit</span></code> を提供するクラス</dd>
 <dt>Atig::Command::Search</dt>
-<dd><tt class="docutils literal"><span class="pre">/me</span> <span class="pre">search</span></tt> を提供するクラス</dd>
+<dd><code class="docutils literal"><span class="pre">/me</span> <span class="pre">search</span></code> を提供するクラス</dd>
 <dt>Atig::Command::Refresh</dt>
 <dd><dl class="first last docutils">
-<dt><tt class="docutils literal"><span class="pre">/me</span> <span class="pre">refresh</span></tt> を提供するクラス</dt>
+<dt><code class="docutils literal"><span class="pre">/me</span> <span class="pre">refresh</span></code> を提供するクラス</dt>
 <dd>Atig::Command::Spam,</dd>
 </dl>
 </dd>
@@ -154,11 +156,12 @@
 <div class="section" id="api">
 <h2>取得するAPIの変更<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h2>
 <p><cite>Atig::Gateway::Session.agents</cite> を変更すると、発言やFollowingを取得するのに利用するAPIを変更できます。:</p>
-<div class="highlight-python"><pre>Atig::Gateway::Session.agents  = [
-                                   Atig::Agent::List,
-                                   Atig::Agent::Following,
-                                   ...
-                                  ]</pre>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Atig</span><span class="p">::</span><span class="n">Gateway</span><span class="p">::</span><span class="n">Session</span><span class="o">.</span><span class="n">agents</span>  <span class="o">=</span> <span class="p">[</span>
+                                   <span class="n">Atig</span><span class="p">::</span><span class="n">Agent</span><span class="p">::</span><span class="n">List</span><span class="p">,</span>
+                                   <span class="n">Atig</span><span class="p">::</span><span class="n">Agent</span><span class="p">::</span><span class="n">Following</span><span class="p">,</span>
+                                   <span class="o">...</span>
+                                  <span class="p">]</span>
+</pre></div>
 </div>
 <p>標準で次のAgentが用意されています。</p>
 <dl class="docutils">
@@ -183,11 +186,12 @@
 <div class="section" id="id4">
 <h2>取得した発言の加工方法の変更<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <p><cite>Atig::Gateway::Session.ifilters</cite> を変更すると、取得した発言の加工方法を変更できます。:</p>
-<div class="highlight-python"><pre>Atig::Gateway::Session.ifilters = [
-                                   Atig::IFilter::Utf7,
-                                   Atig::IFilter::Sanitize,
-                                   ...
-                                  ]</pre>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Atig</span><span class="p">::</span><span class="n">Gateway</span><span class="p">::</span><span class="n">Session</span><span class="o">.</span><span class="n">ifilters</span> <span class="o">=</span> <span class="p">[</span>
+                                   <span class="n">Atig</span><span class="p">::</span><span class="n">IFilter</span><span class="p">::</span><span class="n">Utf7</span><span class="p">,</span>
+                                   <span class="n">Atig</span><span class="p">::</span><span class="n">IFilter</span><span class="p">::</span><span class="n">Sanitize</span><span class="p">,</span>
+                                   <span class="o">...</span>
+                                  <span class="p">]</span>
+</pre></div>
 </div>
 <p>標準で次のIFilterが用意されています。</p>
 <dl class="docutils">
@@ -197,16 +201,16 @@
 <dd>&amp;gt; などを置き換えます。</dd>
 <dt>Atig::IFilter::ExpandUrl</dt>
 <dd>短縮URLを展開します。</dd>
-<dt>Atig::IFilter::Strip.new([<tt class="docutils literal"><span class="pre">footer1</span></tt>, <tt class="docutils literal"><span class="pre">footer2</span></tt>, ...])</dt>
+<dt>Atig::IFilter::Strip.new([<code class="docutils literal"><span class="pre">footer1</span></code>, <code class="docutils literal"><span class="pre">footer2</span></code>, ...])</dt>
 <dd>指定したフッタを除去します。</dd>
 <dt>Atig::IFilter::Retweet</dt>
 <dd>公式RTの先頭に♺ をつけます。</dd>
 <dt>Atig::IFilter::RetweetTime</dt>
 <dd>公式RTの末尾に元発言の日時を表示します。</dd>
 <dt>Atig::IFilter::Tid</dt>
-<dd>発言の末尾に、tidをつけます。 <a class="reference internal" href="options.html"><em>クライアントオプション</em></a> も参照してください。</dd>
+<dd>発言の末尾に、tidをつけます。 <a class="reference internal" href="options.html"><span class="doc">クライアントオプション</span></a> も参照してください。</dd>
 <dt>Atig::IFilter::Sid</dt>
-<dd>発言の末尾に、sidをつけます。 <a class="reference internal" href="options.html"><em>クライアントオプション</em></a> も参照してください。</dd>
+<dd>発言の末尾に、sidをつけます。 <a class="reference internal" href="options.html"><span class="doc">クライアントオプション</span></a> も参照してください。</dd>
 </dl>
 </div>
 <div class="section" id="id5">
@@ -227,23 +231,24 @@ Atig::OFilter::Footer,</div></blockquote>
 <dt>Atig::OFilter::EscapeUrl</dt>
 <dd>URLエスケープを行ないます。</dd>
 <dt>Atig::OFilter::ShortUrl</dt>
-<dd>URLを短縮します。 <a class="reference internal" href="options.html"><em>クライアントオプション</em></a> も参照してください。</dd>
+<dd>URLを短縮します。 <a class="reference internal" href="options.html"><span class="doc">クライアントオプション</span></a> も参照してください。</dd>
 <dt>Atig::OFilter::Geo</dt>
-<dd>位置情報を付加します。 <a class="reference internal" href="options.html"><em>クライアントオプション</em></a> も参照してください。</dd>
+<dd>位置情報を付加します。 <a class="reference internal" href="options.html"><span class="doc">クライアントオプション</span></a> も参照してください。</dd>
 <dt>Atig::OFilter::Footer</dt>
-<dd>フッターを付加します。 <a class="reference internal" href="options.html"><em>クライアントオプション</em></a> も参照してください。</dd>
+<dd>フッターを付加します。 <a class="reference internal" href="options.html"><span class="doc">クライアントオプション</span></a> も参照してください。</dd>
 </dl>
 </div>
 <div class="section" id="id6">
 <h2>チャンネルの変更<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
 <p><cite>Atig::Gateway::Session.channels</cite> を変更すると、作成するチャンネルを変更できます。:</p>
-<div class="highlight-python"><pre>Atig::Gateway::Session.channels = [
-                                   Atig::Channel::Timeline,
-                                   Atig::Channel::Mention,
-                                   Atig::Channel::Dm,
-                                   Atig::Channel::List,
-                                   Atig::Channel::Retweet
-                                  ]</pre>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Atig</span><span class="p">::</span><span class="n">Gateway</span><span class="p">::</span><span class="n">Session</span><span class="o">.</span><span class="n">channels</span> <span class="o">=</span> <span class="p">[</span>
+                                   <span class="n">Atig</span><span class="p">::</span><span class="n">Channel</span><span class="p">::</span><span class="n">Timeline</span><span class="p">,</span>
+                                   <span class="n">Atig</span><span class="p">::</span><span class="n">Channel</span><span class="p">::</span><span class="n">Mention</span><span class="p">,</span>
+                                   <span class="n">Atig</span><span class="p">::</span><span class="n">Channel</span><span class="p">::</span><span class="n">Dm</span><span class="p">,</span>
+                                   <span class="n">Atig</span><span class="p">::</span><span class="n">Channel</span><span class="p">::</span><span class="n">List</span><span class="p">,</span>
+                                   <span class="n">Atig</span><span class="p">::</span><span class="n">Channel</span><span class="p">::</span><span class="n">Retweet</span>
+                                  <span class="p">]</span>
+</pre></div>
 </div>
 <p>標準で次のChannelが用意されています。</p>
 <dl class="docutils">
@@ -267,7 +272,7 @@ Atig::OFilter::Footer,</div></blockquote>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -279,12 +284,12 @@ Atig::OFilter::Footer,</div></blockquote>
         <li class="right" >
           <a href="commands.html" title="CTCP ACTION"
              >previous</a> |</li>
-        <li><a href="index.html">atig.rb 0.4.3 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">atig.rb 0.4.3 documentation</a> &#187;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2010-2013, mzp.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b3.
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2010-2013, mzp.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.2.
     </div>
   </body>
 </html>

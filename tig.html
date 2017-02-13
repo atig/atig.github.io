@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>tig.rbとの違い &mdash; atig.rb 0.4.3 documentation</title>
+    <title>tig.rbとの違い &#8212; atig.rb 0.4.3 documentation</title>
     
     <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -17,18 +17,20 @@
         VERSION:     '0.4.3',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="atig.rb 0.4.3 documentation" href="index.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="更新履歴" href="changelog.html" />
     <link rel="prev" title="設定" href="config.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -40,10 +42,10 @@
         <li class="right" >
           <a href="config.html" title="設定"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">atig.rb 0.4.3 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">atig.rb 0.4.3 documentation</a> &#187;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
@@ -60,22 +62,21 @@
   <h4>Next topic</h4>
   <p class="topless"><a href="changelog.html"
                         title="next chapter">更新履歴</a></p>
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="_sources/tig.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/tig.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -84,7 +85,7 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="tig-rb">
 <h1>tig.rbとの違い<a class="headerlink" href="#tig-rb" title="Permalink to this headline">¶</a></h1>
@@ -95,9 +96,9 @@
 <blockquote>
 <div><ul class="simple">
 <li>認証にxAuthではなくOAuthを使う。</li>
-<li>ツイートを指定するのにtidだけでなくsidが使える。 sidは <a class="reference internal" href="options.html"><em>クライアントオプション</em></a> の <cite>sid</cite> を参照してください。</li>
-<li>一部の <a class="reference internal" href="commands.html"><em>CTCP ACTION</em></a> の名前が異なる。例: tig.rbだと <cite>list</cite> 、atig.rbでは <cite>user</cite>。</li>
-<li>自分への言及を表示する <cite>#mention</cite> チャンネルや、リツイートを表示する <cite>#retweet</cite> チャンネルがある。 <a class="reference internal" href="config.html"><em>設定</em></a> の「チャンネルの変更」で変更できます。</li>
+<li>ツイートを指定するのにtidだけでなくsidが使える。 sidは <a class="reference internal" href="options.html"><span class="doc">クライアントオプション</span></a> の <cite>sid</cite> を参照してください。</li>
+<li>一部の <a class="reference internal" href="commands.html"><span class="doc">CTCP ACTION</span></a> の名前が異なる。例: tig.rbだと <cite>list</cite> 、atig.rbでは <cite>user</cite>。</li>
+<li>自分への言及を表示する <cite>#mention</cite> チャンネルや、リツイートを表示する <cite>#retweet</cite> チャンネルがある。 <a class="reference internal" href="config.html"><span class="doc">設定</span></a> の「チャンネルの変更」で変更できます。</li>
 <li>自分への言及が <cite>#twitter</cite> チャンネルに表示されません。</li>
 </ul>
 </div></blockquote>
@@ -107,7 +108,7 @@
 <blockquote>
 <div><ul class="simple">
 <li>クラス単位でファイルを分割しているます。たぶん、コードをいじりやすいはず。</li>
-<li><a class="reference internal" href="commands.html"><em>CTCP ACTION</em></a> は本体のコードを触らずに拡張可能(たぶん)</li>
+<li><a class="reference internal" href="commands.html"><span class="doc">CTCP ACTION</span></a> は本体のコードを触らずに拡張可能(たぶん)</li>
 </ul>
 </div></blockquote>
 </div>
@@ -119,7 +120,7 @@
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -131,12 +132,12 @@
         <li class="right" >
           <a href="config.html" title="設定"
              >previous</a> |</li>
-        <li><a href="index.html">atig.rb 0.4.3 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">atig.rb 0.4.3 documentation</a> &#187;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2010-2013, mzp.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b3.
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2010-2013, mzp.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.2.
     </div>
   </body>
 </html>
