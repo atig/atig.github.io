@@ -228,7 +228,7 @@ https://github.com/atig/atig/tree/v0.2.0
  - :doc:`options`: `sid` を追加した。
  - :doc:`config`: `Atig::IFilter::Sid` を追加した。
  - :doc:`options`: `old_style_reply` を追加した。
- - :doc:`commands`: `reply`, `retweet`, `destory`, `fav`, `unfav`, `thread` でスクリーンネームやsidを利用できるようにした。
+ - :doc:`commands`: `reply`, `retweet`, `destroy`, `fav`, `unfav`, `thread` でスクリーンネームやsidを利用できるようにした。
 
 バグ修正
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

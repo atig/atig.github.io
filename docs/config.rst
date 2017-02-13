@@ -30,7 +30,7 @@ Atig::Command::Favorite
 Atig::Command::Uptime
   ``/me uptime ...`` を提供するクラス
 Atig::Command::Destroy
-  ``/me destory ...`` を提供するクラス
+  ``/me destroy ...`` を提供するクラス
 Atig::Command::Status
   通常の発言時に使われる内部コマンド
 Atig::Command::Thread
@@ -38,7 +38,7 @@ Atig::Command::Thread
 Atig::Command::Time
   ``/me time ...`` を提供するクラス
 Atig::Command::Version
-  ``/me verison ...`` を提供するクラス
+  ``/me version ...`` を提供するクラス
 Atig::Command::UserInfo
   ``/me userinfo ...`` を提供するクラス
 Atig::Command::Whois
