@@ -3,6 +3,5 @@ require 'rake'
 
 desc "building document with sphinx"
 task :docs do
-  build_dir = "."
-  `LC_CTYPE=C sphinx-build -b html -d #{build_dir}/doctrees -D latex_paper_size=a4 docs #{build_dir}`
+  sh "sphinx-build -M html docs _build"
 end
